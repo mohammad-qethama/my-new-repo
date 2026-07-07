@@ -1,10 +1,100 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+# ==========================================
+# RAG & AI Specific Exclusions
+# ==========================================
+# Local Vector Databases & Indexes
+chroma/
+.chroma/
+faiss/
+.faiss/
+lance/
+qdrant_storage/
+duckdb/
+*.index
+*.pkl
+*.marisa
 
-# Virtual environments
-.venv
+# Document Data & Ingestion Sources
+data/
+documents/
+inputs/
+outputs/
+*.pdf
+*.docx
+*.txt
+*.csv
+*.xlsx
+*.jsonl
+
+# LLM / Cache Cache
+.cache/
+.huggingface/
+.model_cache/
+models/
+weights/
+
+# Evaluation & Logs
+phoenix/
+arize/
+*.log
+rag_eval_results/
+
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+# Contains OpenAI, Anthropic, or database API keys
+.env
+.env.local
+.env.*
+!.env.example
+
+# ==========================================
+# Standard Python Exclusions
+# ==========================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Pipenv, Poetry, and Packaging
+.pytest_cache/
+.tox/
+.coverage
+.cache
+htmlcov/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================================
+# Operating System & IDEs
+# ==========================================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
